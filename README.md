@@ -33,6 +33,14 @@ or using pip:
 pip install -r requirements.txt
 ```
 
+### Venv
+
+You can also create a Venv to install in a virtual space
+
+```shell
+python3 -m venv Venv
+```
+
 ### Configuration file info
 
 * `cp config.json.example config.json`
