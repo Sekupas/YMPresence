@@ -53,3 +53,9 @@ def main():
             else:
                 print("Ублюдок, у тебя радио играет")
             time.sleep(1)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except:
+        pass
