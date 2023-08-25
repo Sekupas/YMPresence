@@ -1,4 +1,5 @@
 import time
+import traceback
 
 from pypresence import Presence
 from yandex_music import Client
@@ -39,7 +40,8 @@ def main():
                 start=int(started),
                 buttons=buttons
             )
-            time.sleep(1)
+        except TypeError:
+            print(traceback.format_exc())
         except Exception as ex:
             RPC.update(
                 state=f"Listening radio",
@@ -47,11 +49,7 @@ def main():
                 start=int(started),
                 buttons=buttons
             )
-            excep = " current_index "
-            if ex == "TypeError":
-                print(ex)
-            else:
-                print("Ублюдок, у тебя радио играет")
+        finally:
             time.sleep(1)
 
 if __name__ == "__main__":
